@@ -398,6 +398,14 @@
         <div class="mobile-view">
             <h1 class="mobile-name">tyler malone</h1>
             
+            <div class="contact-info">
+                <button class="contact-btn" onclick="toggleContact()">contact me</button>
+                <div class="contact-details" id="contactDetailsMobile">
+                    <p>📧 tyler@tylermalone.com</p>
+                    <p>📱 (972) 979-5018</p>
+                </div>
+            </div>
+            
             <div class="category-filter">
                 <button class="category-btn active" data-category="all">All</button>
                 <button class="category-btn" data-category="nonprofit">Nonprofits</button>
@@ -669,7 +677,14 @@
         // Toggle contact details function
         function toggleContact() {
             const contactDetails = document.getElementById('contactDetails');
-            contactDetails.classList.toggle('show');
+            const contactDetailsMobile = document.getElementById('contactDetailsMobile');
+            
+            if (contactDetails) {
+                contactDetails.classList.toggle('show');
+            }
+            if (contactDetailsMobile) {
+                contactDetailsMobile.classList.toggle('show');
+            }
         }
     </script>
 </body>
